@@ -9,7 +9,7 @@ For more information regarding Mimosa, see http://mimosa.io
 
 ## Usage
 
-Add `'coffeescript` to your list of modules.  That's all!  Mimosa will install the module for you when you start `mimosa watch` or `mimosa build`.
+Add `'coffeescript'` to your list of modules.  That's all!  Mimosa will install the module for you when you start `mimosa watch` or `mimosa build`.
 
 ## Functionality
 
@@ -27,7 +27,7 @@ Mimosa will also compile Literate CoffeeScript files if they end with the extens
 
 ```coffeescript
 coffeescript:
-  lib: null
+  lib: undefined
   extensions: ["coffee", "litcoffee"]
   sourceMapDynamic: true
   sourceMapExclude: [/\/specs?\//, /_spec.js$/]

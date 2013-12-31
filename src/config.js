@@ -19,7 +19,7 @@ exports.defaults = function() {
 exports.placeholder = function() {
   return "\t\n\n"+
          "  # coffeescript:              # config settings for the coffeescript compiler module\n" +
-         "    # lib: null                # use this property to provide a specific version of CoffeeScript\n" +
+         "    # lib: undefined           # use this property to provide a specific version of CoffeeScript\n" +
          "    # extensions: [\"coffee\", \"litcoffee\"]  # default extensions for CoffeeScript files\n" +
          "    # sourceMapDynamic: true   # whether or not to inline the source maps in the compiled JavaScript\n" +
          "    # sourceMapExclude: [/\\/specs?\\//, /_spec.js$/] # files to exclude from source map generation\n" +
