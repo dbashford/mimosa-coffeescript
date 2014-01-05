@@ -18,6 +18,7 @@
     "mimosa",
     "mmodule",
     "coffeescript",
+    "compiler",
     "source",
     "maps"
   ],
