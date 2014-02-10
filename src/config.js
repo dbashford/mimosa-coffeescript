@@ -1,7 +1,5 @@
 "use strict";
 
-var logger = require( 'logmimosa' );
-
 exports.defaults = function() {
   return {
     coffeescript: {
@@ -53,7 +51,7 @@ exports.validate = function(config, validators) {
       if ( validators.ifExistsIsBoolean( errors, "coffee.sourceMapDynamic", config.coffeescript.sourceMapDynamic ) ) {
         if (config.isWatch && config.isMinify && config.coffeescript.sourceMapDynamic ) {
           config.coffeescript.sourceMapDynamic = false;
-          logger.debug( "mimosa watch called with minify, setting coffeescript.sourceMapDynamic to false to preserve source maps." );
+          config.log.debug( "mimosa watch called with minify, setting coffeescript.sourceMapDynamic to false to preserve source maps." );
         }
       }
 
