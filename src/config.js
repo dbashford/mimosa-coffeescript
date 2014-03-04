@@ -16,16 +16,16 @@ exports.defaults = function() {
 };
 
 exports.placeholder = function() {
-  return "\t\n\n"+
-         "  # coffeescript:              # config settings for the coffeescript compiler module\n" +
-         "    # lib: undefined           # use this property to provide a specific version of CoffeeScript\n" +
-         "    # extensions: [\"coffee\", \"litcoffee\"]  # default extensions for CoffeeScript files\n" +
-         "    # sourceMapDynamic: true   # whether or not to inline the source maps in the compiled JavaScript\n" +
-         "    # sourceMapExclude: [/\\/specs?\\//, /_spec.js$/] # files to exclude from source map generation\n" +
-         "    # sourceMapConditional: false # whether or not to use conditional source maps\n" +
-         "    # options:                 # options for the CoffeeScript compiler\n" +
-         "      # sourceMap:true         # whether or not to create source maps\n" +
-         "      # bare:true              # whether or not to use the default safety wrapper\n";
+  return "\t\n\n" +
+         "  coffeescript:              # config settings for the coffeescript compiler module\n" +
+         "    lib: undefined           # use this property to provide a specific version of CoffeeScript\n" +
+         "    extensions: [\"coffee\", \"litcoffee\"]  # default extensions for CoffeeScript files\n" +
+         "    sourceMapDynamic: true   # whether or not to inline the source maps in the compiled JavaScript\n" +
+         "    sourceMapExclude: [/\\/specs?\\//, /_spec.js$/] # files to exclude from source map generation\n" +
+         "    sourceMapConditional: false # whether or not to use conditional source maps\n" +
+         "    options:                 # options for the CoffeeScript compiler\n" +
+         "      sourceMap:true         # whether or not to create source maps\n" +
+         "      bare:true              # whether or not to use the default safety wrapper\n";
 };
 
 exports.validate = function(config, validators) {
@@ -34,7 +34,7 @@ exports.validate = function(config, validators) {
   if ( validators.ifExistsIsObject( errors, "coffeescript config", config.coffeescript ) ) {
 
     if ( !config.coffeescript.lib ) {
-      config.coffeescript.lib = require( 'coffee-script' );
+      config.coffeescript.lib = require( "coffee-script" );
     }
 
     if ( validators.isArrayOfStringsMustExist( errors, "coffeescript.extensions", config.coffeescript.extensions ) ) {
@@ -59,7 +59,7 @@ exports.validate = function(config, validators) {
         errors,
         "coffeescript.sourceMapExclude",
         config.coffeescript,
-        'sourceMapExclude',
+        "sourceMapExclude",
         config.watch.javascriptDir );
     }
   }
