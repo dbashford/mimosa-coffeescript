@@ -8,8 +8,8 @@ exports.defaults = function() {
       sourceMapExclude: [/\/specs?\//, /_spec.js$/],
       sourceMapConditional: false,
       options: {
-        sourceMap:true,
-        bare:true
+        sourceMap: true,
+        bare: true
       }
     }
   };
